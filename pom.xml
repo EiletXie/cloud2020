@@ -21,6 +21,8 @@
         <module>cloud-providerconsul-payment8006</module>
         <module>cloud-consumerconsul-order80</module>
         <module>cloud-consumer-feign-order80</module>
+        <module>cloud-provider-hystrix-payment8001</module>
+        <module>cloud-consumer-feign-hystrix-order80</module>
     </modules>
 
 
