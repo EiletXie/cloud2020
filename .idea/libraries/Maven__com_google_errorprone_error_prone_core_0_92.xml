@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.errorprone:error_prone_core:0.92">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_core/0.92/error_prone_core-0.92.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_core/0.92/error_prone_core-0.92-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_core/0.92/error_prone_core-0.92-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
