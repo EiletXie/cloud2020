@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eiletxie.springcloud.alibaba.dao.AccountDao">
+
+    <resultMap id="BaseResultMap" type="com.eiletxie.springcloud.alibaba.domain.Account">
+        <id column="id" property="id" jdbcType="BIGINT"></id>
+        <result column="user_id" property="userId" jdbcType="BIGINT"></result>
+        <result column="total" property="total" jdbcType="DECIMAL"></result>
+        <result column="used" property="used" jdbcType="DECIMAL"></result>
+        <result column="residue" property="residue" jdbcType="DECIMAL"></result>
+    </resultMap>
+
+    <update id="decrease">
+        update t_account
+        set used = used + #{money},residue = residue - #{money}
+        where  user_id= #{userId};
+    </update>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eiletxie.springcloud.alibaba.dao.OrderDao">
+
+    <resultMap id="BaseResultMap" type="com.eiletxie.springcloud.alibaba.domain.Order">
+        <id column="id" property="id" jdbcType="BIGINT"></id>
+        <result column="user_id" property="userId" jdbcType="BIGINT"></result>
+        <result column="product_id" property="productId" jdbcType="BIGINT"></result>
+        <result column="count" property="count" jdbcType="INTEGER"></result>
+        <result column="money" property="money" jdbcType="DECIMAL"></result>
+        <result column="status" property="status" jdbcType="INTEGER"></result>
+    </resultMap>
+
+    <insert id="create" parameterType="com.eiletxie.springcloud.alibaba.domain.Order" useGeneratedKeys="true"
+            keyProperty="id">
+        insert into t_order(user_id,product_id,count,money,status) values (#{userId},#{productId},#{count},#{money},0);
+    </insert>
+
+    <update id="update">
+        update t_order set status =1 where user_id =#{userId} and status=#{status};
+    </update>
+</mapper>
